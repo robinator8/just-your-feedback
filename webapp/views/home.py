@@ -1,7 +1,7 @@
 from pyramid.view import view_defaults
 
 
-@view_defaults(route_name='home', renderer='templates/home.jinja2')
+@view_defaults(route_name='home', renderer='templates/base.jinja2')
 class HomeView:
 
     def __init__(self, request):
