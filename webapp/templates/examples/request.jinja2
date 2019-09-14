@@ -1,0 +1,33 @@
+{% extends "/templates/base.jinja2" %}
+
+{% block content %}
+    <p>
+        This page displays the path parameters (parameters included in the url) and the query parameters (parameters included after the ? in the url). You can try editing them and reloading the page. 
+    </p>
+    <p>
+        Note that the the path parameter 'variable1' has the condition that it must be an integer, or else the route won't match.
+    </p>
+    <table>
+        <thead>
+            <th>Variable Type</th>
+            <th>Key</th>
+            <th>Value</th>
+        </thead>
+        <tbody>
+            {% for key, value in path_params.items() %}
+            <tr>
+                <td>Path</td>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            <tr>
+            {% endfor %}
+            {% for key, value in query_params.items() %}
+            <tr>
+                <td>Query</td>
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            <tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
