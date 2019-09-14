@@ -9,8 +9,8 @@ def main(global_config, **settings):
         config.include('pyramid_jinja2')
 
         # Include views
-        config.include('webapp.views.example')
+        config.include('webapp.views.send_image')
         config.include('webapp.views.home')
 
         config.scan('webapp.views')
-        return config.make_wsgi_app()
+        return config.make_wsgi_app() 
