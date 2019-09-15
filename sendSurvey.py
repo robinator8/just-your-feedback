@@ -1,10 +1,10 @@
-﻿import requests
+import requests
 import json
 
 s = requests.Session()
 
 s.headers.update({
-	'Authorization': 'Bearer YuD-kWBROOg27DhYlJUnEwY-Z-MQcVH4c.l2USSyKx8EXT8kBcX6oXPXz.6k5EGxpKFS6Iktw5uTJKypOFEdvs376jxOopJD0onhTqD4CzdjaA0WOStbaOj7250s5z13',
+	'Authorization': 'Bearer 3ftjpb3cHd1U1myNUT.JRv4Mop8EL5Ux6l6rZ2.COGwou8IYQSPDwGQHvGLVrsxUXpRg1FDYqBnZ8dV6.kmKnnnQpzCmvkECaS-DHyJ1FNnZdlPbn2G3IoIbcHeCNHxz',
 	'Content-Type': 'application/json'
 })
 
@@ -12,7 +12,7 @@ s.headers.update({
 url = "https://api.surveymonkey.com/v3/collectors/246369898/responses"
 
 payload = {
-	"pages": [{"id": "95299687","questions": [{"answers": [{"choice_id": "2272084645"}], "id": "343960285"}]}]
+	"pages": [{"id": "95357896", "questions": [{"answers": [{"choice_id": "2273144660"}], "id": "344117296"}]}]
 }
 
 s.post(url, json=payload)
