@@ -5,8 +5,8 @@ def image_pred(image):
     execution_path = os.getcwd()
 
     prediction = CustomImagePrediction()
-    prediction.setModelTypeAsInceptionV3()
-    prediction.setModelPath(os.path.join(execution_path, "model_ex-004_acc-0.492188.h5"))
+    prediction.setModelTypeAsSqueezeNet()
+    prediction.setModelPath(os.path.join(execution_path, "model_ex-020_acc-0.992188.h5"))
     prediction.setJsonPath(os.path.join(execution_path, "model_class.json"))
     prediction.loadModel(num_objects=2)
 
@@ -16,6 +16,6 @@ def image_pred(image):
     out = ("", 0)
     for eachPrediction, eachProbability in zip(predictions, probabilities):
         print(eachPrediction , " : " , eachProbability)
-    if probabilities[0] > probabilities[1]:
+    if probabilities[0] > 90:
         return predictions[0]
-    return eachPrediction[1]
+    return predictions[1]
