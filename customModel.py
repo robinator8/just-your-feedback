@@ -4,8 +4,7 @@ from imageai.Prediction import ImagePrediction
 from imageai.Prediction.Custom import ModelTraining
 
 model_trainer = ModelTraining()
-prediction = ImagePrediction()
 
-model_trainer.setModelTypeAsInceptionV3()
+model_trainer.setModelTypeAsSqueezeNet()
 model_trainer.setDataDirectory(r"C:\Users\Adrian\source\repos\just-your-feedback\color")
-model_trainer.trainModel(num_objects=2, num_experiments=10, enhance_data=True, batch_size=32, show_network_summary=True)
+model_trainer.trainModel(num_objects=2, num_experiments=20, enhance_data=False, batch_size=32, show_network_summary=True)
