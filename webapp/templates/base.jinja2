@@ -27,7 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font: sans-serif;
 	vertical-align: baseline;
 }
 
@@ -269,7 +269,7 @@ body {
 }
 
 body, input, select, textarea {
-	font-family: "Scope One", serif;
+	font-family: sans-serif;
 	font-size: 13pt;
 	font-weight: 300;
 	line-height: 1.65;
@@ -2522,12 +2522,13 @@ body.subpage {
 					<h1>Did you enjoy Hack the North?</h1>
 					<p>Thumbs Up or Thumbs Down</p>
 				</header>
-                <div id="content">
-                <div id="my_camera" style="float:center"></div>
-    <input type=button value="Take Snapshot" onClick="take_snapshot()">
+                <div id="content" style="display:flex;align-content:center;justify-content:center;">
+                <div id="my_camera"></div>			</div>
+                <input type=button value="Take Snapshot" onClick="take_snapshot()" style="margin-top:10px;">
+    
     
     <div id="results" ></div>
-			</div>
+
 		</section>
 
     
@@ -2554,7 +2555,7 @@ body.subpage {
         xhr.onreadystatechange = function () {
             if (this.status === 200) {
                 
-                document.getElementById('results').innerHTML = this.responseText;
+                document.getElementById('results').innerHTML = this.responseText.toString().replace(/['"]+/g, '');
             }
         }
         xhr.send();
