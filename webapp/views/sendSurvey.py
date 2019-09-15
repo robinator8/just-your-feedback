@@ -11,7 +11,7 @@ def send_survey(color):
 	})
 
 	##url = "https://api.surveymonkey.com/v3/surveys"
-	url = "https://api.surveymonkey.com/v3/collectors/246369898/responses"
+	url = "https://api.surveymonkey.com/v3/collectors/246392036/responses"
 
 	if(color is "red"):
 		payload = {
