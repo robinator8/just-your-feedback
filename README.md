@@ -8,11 +8,11 @@ Technologies Utilized:
 Python, Pyramid (Web Framework), ImageAI (Python Library for Machine Learning Algorithms), JavaScript, HTML, CSS, JSON, SurveyMonkey's Developer API.
 
 Developer Notes:
-Activate the virtual environment by running `source pyenv/bin/activate` from the project root.
+Activate the virtual environment by running `source pyenv/bin/activate` for mac `.\env\Scripts\activate` on windows and from the project root.
 **NOTE: To leave a virtual environment, simply run `deactivate` from within the virtual enviroment.**
 
 ## Install Requirements
-Run `pip install -e .`. This installs all the Python packages specified in the `setup.py` file.
+Run `pip install -e .`. This installs all the Python packages specified in the `setup.py` file. You will also have to run `pip install setuptools==41.0.0` 
 
 ## Run Waitress Server
 Run `pserve development.ini --reload`. 
